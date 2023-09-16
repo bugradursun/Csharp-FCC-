@@ -10,39 +10,16 @@ namespace Giraffe
     {
         static void Main(string[] args)
         {
-            string secretWord = "giraffe";
-            string guess = "";
-            int guessCount = 0;
-            int guessLimit = 3;
-            bool outOfGuesses = false;
-           
-            while(guess != secretWord && !outOfGuesses)
-            {
-                if(guessCount < guessLimit) {
-                    Console.Write("Kelime tahmin et");
-                    guess = Console.ReadLine();
-                    guessCount++;
-                }
-                else
-                {
-                    outOfGuesses = true;
-                    
-                }
-                
+            Book book1 = new Book("Mike");
+            book1.title = "Harry Potter";
+            book1.author = "JK Rowling";
+            book1.pages = 400;
 
-            }
-            if (outOfGuesses)
-            {
-                Console.Write("You lose");
-            }
-            else
-            {
-                Console.Write("Bildin");
-            }
-            
+            Book book2 = new Book("John");
+            book2.title = "Lord Of the Rings";
+            book2.author = "Tolkein";
+            book2.pages = 700;
 
-
-            
             Console.ReadLine();
         }
         
