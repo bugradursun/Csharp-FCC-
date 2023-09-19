@@ -12,9 +12,11 @@ namespace Giraffe
         public string author;
         public int pages;
 
-        public Book(string name)
+        public Book(string aTitle,string aAuthor,int aPages)
         {
-            Console.WriteLine("Creating Book, initialization done!" + name);
+            title = aTitle;
+            author = aAuthor;
+            pages = aPages;
         }
     }
 }

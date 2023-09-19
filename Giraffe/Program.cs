@@ -10,16 +10,11 @@ namespace Giraffe
     {
         static void Main(string[] args)
         {
-            Book book1 = new Book("Mike");
-            book1.title = "Harry Potter";
-            book1.author = "JK Rowling";
-            book1.pages = 400;
+            Student student1 = new Student("Jim", "Business", 2.8);
+            Student student2 = new Student("Pam", "Art", 3.6);
 
-            Book book2 = new Book("John");
-            book2.title = "Lord Of the Rings";
-            book2.author = "Tolkein";
-            book2.pages = 700;
-
+            
+            
             Console.ReadLine();
         }
         
