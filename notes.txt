@@ -2,3 +2,7 @@ variable of a class: a copy of the class that is not initialized.
 instance of a class: a copy of the class initalized by using the new keyword , memory is allocated.
 reference of a class: a copy of the class that is created by using existing instance. Since it is referenced, new objects are in same memory locatioon
 and new objects wont have any NEW memory allocation!
+--------------------------------ACCESS SPECIFIERS -------------------------------------------------
+private : u kno, public : u kno too 
+protected: only accesssible when it is used in an inheritance, when child is inherited by parent it is accesible.
+intrenal :Accessible only with same assembly (DLL and EXE)(same assembly means code is compiled together and located in same output file). different assemblies cant access to internal variables !
