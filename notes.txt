@@ -1,0 +1,4 @@
+variable of a class: a copy of the class that is not initialized.
+instance of a class: a copy of the class initalized by using the new keyword , memory is allocated.
+reference of a class: a copy of the class that is created by using existing instance. Since it is referenced, new objects are in same memory locatioon
+and new objects wont have any NEW memory allocation!
