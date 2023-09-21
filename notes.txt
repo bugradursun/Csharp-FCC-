@@ -6,3 +6,9 @@ and new objects wont have any NEW memory allocation!
 private : u kno, public : u kno too 
 protected: only accesssible when it is used in an inheritance, when child is inherited by parent it is accesible.
 intrenal :Accessible only with same assembly (DLL and EXE)(same assembly means code is compiled together and located in same output file). different assemblies cant access to internal variables !
+-------------------------VARIABLE TYPES -----------------------------------------------------------
+Non-static : int y; must create an instance to access. memory is located after creating an instance
+Static: static int y; Accessible without instance and also variables inside a static block are static too.
+Constant: const float pi = 3.14f; cant be modified once after their declaration. Doesnt require instance of a class.
+ReadOnly:readonly bool flag;  caninitialized in constructor. doesnt require to initialize at declaration. Behavior is similar to non static variables ! 
+----------------
