@@ -11,4 +11,7 @@ Non-static : int y; must create an instance to access. memory is located after c
 Static: static int y; Accessible without instance and also variables inside a static block are static too.
 Constant: const float pi = 3.14f; cant be modified once after their declaration. Doesnt require instance of a class.
 ReadOnly:readonly bool flag;  caninitialized in constructor. doesnt require to initialize at declaration. Behavior is similar to non static variables ! 
-----------------
+---------------------- INHERITANCE---------------------------------------------------
+1)Parent class constructor must be accessible to child class or else inheritance will not be possible
+2)In inheritance child classes can access parent classes members but a parent class can never access  child class members.
+3) 
