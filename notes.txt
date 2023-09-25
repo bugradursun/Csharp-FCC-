@@ -18,3 +18,6 @@ ReadOnly:readonly bool flag;  caninitialized in constructor. doesnt require to i
 ex:public Class() = base(12)  => by this way we sent int 12 to parent classes consturctor as parameter
 -----------------METHOD OVERLOADING-------------------------------
 Defining a method multiple times with different parameters and same or different outputs. This means overloading.
+-----------------OVERLOADING vs OVERRIDING--------------------------
+Overloading is defining multiple behaviours to a method with the change of the input. Overriding is changing the behaviour of the parent class.
+Parent-child inheritance is required for overriding
