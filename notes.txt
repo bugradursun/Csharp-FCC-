@@ -26,3 +26,12 @@ abstract method is a method without a body and abstract class is a class which c
 -!-declare abstract method in parent class and use abstract keyword when defining the parent class. AFter that we can define this abstract method in our child parent with same name with different logic and return statements.!!
 ----------------------INTERFACES--------------------------------
 this is also an user defined data type like classes. Difference is we can't define any method body here,we only define methods without a body and we implement body logic in a child class!!
+--------------------ENUM-------------------
+Enum is a special 'class' that represents a group of constants(read-only) values.
+enum Level {
+Low,
+Medium,
+High
+}
+
+Level variable1 = Level.Medium; //accessing enum items
