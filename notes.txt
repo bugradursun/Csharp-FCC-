@@ -16,3 +16,38 @@ ReadOnly:readonly bool flag;  caninitialized in constructor. doesnt require to i
 2)In inheritance child classes can access parent classes members but a parent class can never access  child class members.
 3) If the parent classes constructor is parameterized, then we have to use base keyword to call it with child class
 ex:public Class() = base(12)  => by this way we sent int 12 to parent classes consturctor as parameter
+-----------------METHOD OVERLOADING-------------------------------
+Defining a method multiple times with different parameters and same or different outputs. This means overloading.
+-----------------OVERLOADING vs OVERRIDING--------------------------
+Overloading is defining multiple behaviours to a method with the change of the input. Overriding is changing the behaviour of the parent class.
+Parent-child inheritance is required for overriding
+-----------------ABSTRACT CLASS AND METHODS----------------
+abstract method is a method without a body and abstract class is a class which contains any abstract member.
+-!-declare abstract method in parent class and use abstract keyword when defining the parent class. AFter that we can define this abstract method in our child parent with same name with different logic and return statements.!!
+----------------------INTERFACES--------------------------------
+this is also an user defined data type like classes. Difference is we can't define any method body here,we only define methods without a body and we implement body logic in a child class!!
+--------------------ENUM-------------------
+Enum is a special 'class' that represents a group of constants(read-only) values.
+enum Level {
+Low,
+Medium,
+High
+}
+
+Level variable1 = Level.Medium; //accessing enum items
+----------------------PROPERTIES---------------------------
+Variables declared in classes are private in default.To access them from outside we should define them public which leads to limitless access to outside scopes, it is not very safe. To restrict this don't declare them as public, use properties. with properties we set getter and setter so we give access however we want.
+
+Example: 
+public double RadiusProperty {
+get{return Radius;}
+set{Radius= value;}
+} //we defined getter and setter 
+
+double radius = c.RadiusProperty; // c is an object of the class where we are in scope
+c.RadiusProperty= 55;
+}
+
+
+//PUTTING _ to the head of variablename will let other coders understand it is a propery.
+ex: double _Radius;
