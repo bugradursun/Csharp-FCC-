@@ -35,9 +35,9 @@ namespace Giraffe
             p.Test("abc", 2);
             p.Test(1);
             Console.ReadLine();
-      
+
         }
-        
+
     }
     
 }
