@@ -51,3 +51,9 @@ c.RadiusProperty= 55;
 
 //PUTTING _ to the head of variablename will let other coders understand it is a propery.
 ex: double _Radius;
+
+-------------------------------------DELEGATES------------------------------
+Holds the reference of a  method then calls the method for execution.Provides a way which tells which method is to be called when event is triggered
+
+[<modifiers>] delegate <return type> [delegate name] ([parameterlist]) //define delegate
+<delegate name> <objname> = new <delegatename> (method) //calling delegate
