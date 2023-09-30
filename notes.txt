@@ -47,3 +47,7 @@ set{Radius= value;}
 double radius = c.RadiusProperty; // c is an object of the class where we are in scope
 c.RadiusProperty= 55;
 }
+
+
+//PUTTING _ to the head of variablename will let other coders understand it is a propery.
+ex: double _Radius;
