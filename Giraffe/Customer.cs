@@ -11,14 +11,15 @@ namespace Giraffe
         //if we do define varaibles as public they will be accessed from outside of the class
         int _Custid;
         bool _Status;
-        string _Cname;
+        string _Cname,_City;
         double _Balance;
-        public Customer(int Custid, bool Status, string Cname, double Balance)
+        public Customer(int Custid, bool Status, string Cname, double Balance,string City)
         {
             _Custid = Custid;
             _Status = Status;
             _Cname = Cname;
             _Balance = Balance;
+            _City = City;
         }
         public int Custid
         {
@@ -38,6 +39,21 @@ namespace Giraffe
         {
             get { return _Balance; }
             set { _Balance = value; }
+        }
+        public string City
+        {
+            get { return _City; }
+            set
+            {
+                if(_Status == true)
+                {
+                    if (value == "Delhi" || value=="Mumbai" || value =="İstanbul")
+                    {
+                        _City = value;
+                    }
+                   
+                }
+            }
         }
     }
 }

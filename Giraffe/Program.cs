@@ -29,14 +29,14 @@ namespace Giraffe
             Console.WriteLine("5th Method.");
         }
 
-        static void Main(string[] args)
-        {
-            Program p = new Program();
-            p.Test("abc", 2);
-            p.Test(1);
-            Console.ReadLine();
+       // static void Main(string[] args)
+        //{
+         //   Program p = new Program();
+           // p.Test("abc", 2);
+            //p.Test(1);
+            //Console.ReadLine();
 
-        }
+      //  }
 
     }
     

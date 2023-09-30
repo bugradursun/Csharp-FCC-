@@ -8,11 +8,11 @@ namespace Giraffe
 {
     class TestCustomer
     {
-        static void Main()
-        {
-            Customer obj = new Customer(101, false, "John", 5000.00);
-            
-            Console.ReadLine();
-        }
+        //static void Main()
+        // {
+        //  Customer obj = new Customer(101, false, "John", 5000.00,"İstanbul");
+        //  Console.WriteLine("Current City" +  obj.City);
+        //  Console.ReadLine();
+        //}
     }
 }
