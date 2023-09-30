@@ -35,3 +35,15 @@ High
 }
 
 Level variable1 = Level.Medium; //accessing enum items
+----------------------PROPERTIES---------------------------
+Variables declared in classes are private in default.To access them from outside we should define them public which leads to limitless access to outside scopes, it is not very safe. To restrict this don't declare them as public, use properties. with properties we set getter and setter so we give access however we want.
+
+Example: 
+public double RadiusProperty {
+get{return Radius;}
+set{Radius= value;}
+} //we defined getter and setter 
+
+double radius = c.RadiusProperty; // c is an object of the class where we are in scope
+c.RadiusProperty= 55;
+}
