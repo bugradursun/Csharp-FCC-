@@ -3,41 +3,91 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
+
 
 namespace Giraffe
 {
-    class Program
+    public struct Book
     {
-        public void Test()
-        {
-            Console.WriteLine("1st Method.");
-        }
-        public void Test(int i)
-        {
-            Console.WriteLine("2nd Method.");
-        }
-        public void Test(string s)
-        {
-            Console.WriteLine("3rd Method.");
-        }
-        public void Test(int i , string s)
-        {
-            Console.WriteLine("4th Method.");
-        }
-        public void Test(string s , int i)
-        {
-            Console.WriteLine("5th Method.");
-        }
+        public string Title;
+        public string Author;
+        public decimal Price;
+        public bool Paperback;
 
-       // static void Main(string[] args)
-        //{
-         //   Program p = new Program();
-           // p.Test("abc", 2);
-            //p.Test(1);
-            //Console.ReadLine();
-
-      //  }
-
+        public Book(string title, string author,decimal price,bool paperBack)
+        {
+            Title = title;
+            Author = author;
+            Price = price;
+            Paperback = paperBack;
+        }
     }
-    
+    public delegate void ProcessBookCallback(Book book);
+
+    public class BookDB
+    {
+        ArrayList list = new ArrayList();
+
+        public void AddBook(string title,string author, decimal price,bool paperBack)
+        {
+            list.Add(new Book(title, author, price, paperBack));
+        }
+        public void ProcessPaperbackBooks(ProcessBookCallback processBook)
+        {
+            foreach(Book b in list)
+            {
+                if (b.Paperback) { processBook(b); }
+            }
+        }
+    }
+}
+namespace BookTestClient
+{
+    using Giraffe;
+    class PriceTotaller
+    {
+        int countBooks = 0;
+        decimal priceBooks = 0.0m;
+
+        internal void AddBookToTotal(Book book)
+        {
+            countBooks += 1;
+            priceBooks += book.Price;
+        }
+
+        internal decimal AveragePrice()
+        {
+            return priceBooks / countBooks;
+        }
+    }
+
+    class Test
+    {
+        static void printTitle(Book b)
+        {
+            Console.WriteLine($" {b.Title}");
+        }
+
+        static void Main()
+        {
+            BookDB bookDB = new BookDB();
+            AddBooks(bookDB);
+            Console.WriteLine("Paperback Book Titles:");
+            bookDB.ProcessPaperbackBooks(printTitle);
+            PriceTotaller totaller = new PriceTotaller();
+            bookDB.ProcessPaperbackBooks(totaller.AddBookToTotal);
+            Console.WriteLine("Average Paperback Book Price: ${0:#.##}",
+                   totaller.AveragePrice());
+            Console.ReadLine();
+        }
+
+        static void AddBooks(BookDB bookDB)
+        {
+            bookDB.AddBook("The C Programming Language", "Brian W. Kernighan and Dennis M. Ritchie", 19.95m, true);
+            bookDB.AddBook("The Unicode Standard 2.0", "The Unicode Consortium", 39.95m, true);
+            bookDB.AddBook("The MS-DOS Encyclopedia", "Ray Duncan", 129.95m, false);
+            bookDB.AddBook("Dogbert's Clues for the Clueless", "Scott Adams", 12.00m, true);
+        }
+    }
 }
