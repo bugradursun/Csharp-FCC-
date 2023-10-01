@@ -57,3 +57,5 @@ Holds the reference of a  method then calls the method for execution.Provides a 
 
 [<modifiers>] delegate <return type> [delegate name] ([parameterlist]) //define delegate
 <delegate name> <objname> = new <delegatename> (method) //calling delegate
+
+-The purpose of using delegates is to provide a flexible and extensible way to process.
