@@ -61,5 +61,20 @@ Holds the reference of a  method then calls the method for execution.Provides a 
 -The purpose of using delegates is to provide a flexible and extensible way to process.
 -----------------------MULTI-THREADING---------------------------------------------
 We cam write applications that can perform multiple tasks at the same time. applications that use multithreading are more responsive to user input because UI stays active as processor-intensive asks execute on seperate threads.
+Example:
 
--
+Test1();
+Test2();
+Test3();
+//we have 3 methods and by default if any bug or runtimerror happens it cant skip to next method,so we will waste time
+//to prevent that we use multi threading which gives same prior time to all methods!
+
+static void Main() {
+Thread T1 = new Thread(Test1);
+Thread T2 = new Thread(Test2);
+Thread T3 = new Thread(TEst3);
+T1.Start(); //with start mthod we execute the methods
+T2.Start();
+T3.Start();
+//with this approach of multi threading now all methods will be executed in same time, even a bug happens it will jump onto next method !
+}
