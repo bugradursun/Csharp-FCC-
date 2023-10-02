@@ -59,3 +59,7 @@ Holds the reference of a  method then calls the method for execution.Provides a 
 <delegate name> <objname> = new <delegatename> (method) //calling delegate
 
 -The purpose of using delegates is to provide a flexible and extensible way to process.
+-----------------------MULTI-THREADING---------------------------------------------
+We cam write applications that can perform multiple tasks at the same time. applications that use multithreading are more responsive to user input because UI stays active as processor-intensive asks execute on seperate threads.
+
+-
