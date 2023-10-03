@@ -49,7 +49,7 @@ namespace Giraffe
                 {
                     return Location;
                 }
-                return null;
+                return null; 
                 
             }
         }
