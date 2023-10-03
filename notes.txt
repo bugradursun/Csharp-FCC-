@@ -78,3 +78,16 @@ T2.Start();
 T3.Start();
 //with this approach of multi threading now all methods will be executed in same time, even a bug happens it will jump onto next method !
 }
+
+-normalde 2 thread tanimladiysak 3 threadimiz olur + ekstra olarak main thread var. Ve default olarak main thread basladigi gibi bitiyor sonrasinda digre threadler execute oluyor.
+Main threadi en son bitirmek icin ve diger threadleri beklemesi icin T1.Start(); tan sonra T1.Join(); kullan. bunu her thread icin yapabiliriz.
+
+!! lock()
+lock(this) {
+codeblock
+codeblock
+codeblock
+}
+this code block is locked and suppose threads t1 and t2 executes this codeblock seperately. Since the method is locked it wont skip to t2 until t1 finishes.
+
+- to stop a thread => thread.abort();
