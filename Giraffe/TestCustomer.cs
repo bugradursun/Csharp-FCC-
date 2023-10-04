@@ -8,7 +8,7 @@ namespace Giraffe
 {
     class TestCustomer
     {
-        static void Test1()
+        static void Test1() 
         {
             Console.WriteLine("Thread1 is starting");
             for (int i =1; i<=25;i++)            
