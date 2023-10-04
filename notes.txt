@@ -100,3 +100,17 @@ Generic collections are Type safe(same data types) and they can auto resize(impl
 To create a List:
 List<T> name = new List<T>();
 List<int> mylist= new List<int>(); 
+
+Generics: Allows us to create reusable code by creating parametarize types. We can create classes,interfaces and methods that work with different data types without having to define data type explicitly.
+Ex: 
+public bool Compare <T>(T a, T b) {
+..........
+.....
+.......
+}
+
+Compare<int>(5,4);
+Compare<bool>(false,true)
+Compare<floar>(2.1f,4.3f);
+
+With generics we were able to pass different types of data to our method!!
