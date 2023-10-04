@@ -91,3 +91,26 @@ codeblock
 this code block is locked and suppose threads t1 and t2 executes this codeblock seperately. Since the method is locked it wont skip to t2 until t1 finishes.
 
 - to stop a thread => thread.abort();
+------------------------------COLLECTIONS----------------------------
+collections are dynamic arrays. We cant increase the size,insert values into middle and delete values from arrays. So collections overcome this problem.
+Nongeneric collections : ArrayList,HashTable,Stack,Queue,BitArray => holds elements of different data types
+Generic Collections : List,Dictionary,HashSet => holds elements of same data types
+Generic collections are Type safe(same data types) and they can auto resize(implement new values)
+
+To create a List:
+List<T> name = new List<T>();
+List<int> mylist= new List<int>(); 
+
+Generics: Allows us to create reusable code by creating parametarize types. We can create classes,interfaces and methods that work with different data types without having to define data type explicitly.
+Ex: 
+public bool Compare <T>(T a, T b) {
+..........
+.....
+.......
+}
+
+Compare<int>(5,4);
+Compare<bool>(false,true)
+Compare<floar>(2.1f,4.3f);
+
+With generics we were able to pass different types of data to our method!!
