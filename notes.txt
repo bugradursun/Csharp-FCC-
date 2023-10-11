@@ -114,3 +114,5 @@ Compare<bool>(false,true)
 Compare<floar>(2.1f,4.3f);
 
 With generics we were able to pass different types of data to our method!!
+-!-When we use user defined type in collections, we can't directly use sorting method. So we need to implement interfaces such as IComperable or etc.. to our classes to be able to use sorting algorithms
+We cant directly use them because since user defined types are complex structures.
