@@ -34,7 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Giraffe.HashCollection</StartupObject>
+    <StartupObject>Giraffe.TestStudent</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HashCollection.cs" />
+    <Compile Include="Student.cs" />
     <Compile Include="TestCustomer.cs" />
     <Compile Include="ItestInterface.cs" />
     <Compile Include="Employee.cs" />
