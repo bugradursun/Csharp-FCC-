@@ -116,3 +116,22 @@ Compare<floar>(2.1f,4.3f);
 With generics we were able to pass different types of data to our method!!
 -!-When we use user defined type in collections, we can't directly use sorting method. So we need to implement interfaces such as IComperable or etc.. to our classes to be able to use sorting algorithms
 We cant directly use them because since user defined types are complex structures.
+-----------------------------IEnumerable and IEnumerator-----------------------------------------
+IEnumerator interface gives us ability to iterate and use foreach with our collections by its own GetEnumerator MEthod.
+!we can use foreach with IEnumerable.
+
+
+---With IEnumerator interface we define our own enumerator,when we iterate it calls GetEnumerator();
+class MyEnumerator:IEnumerator {
+Arraylist array;
+int index = -1; // cunku zaten movenext cagirildiginda 0. indexe gececek o yuzden -1
+public MyEnumerator(Arraylist array) {
+this.array = array;
+}
+public object Current => array[index];
+public bool MoveNext(){ some logic here}
+public void Reset() { index=-1}
+
+
+
+}
