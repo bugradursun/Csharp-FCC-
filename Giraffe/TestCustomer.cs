@@ -1,45 +1,53 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Threading;
-namespace Giraffe
+//using Microsoft.Data.SqlClient;
+using System.Data.SqlClient;
+namespace ExcelDataBase
 {
-    class TestCustomer
+    public partial class Form1 : Form
     {
-        static void Test1() 
+
+        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-I376K2M;Initial Catalog=ProjelerVT;Integrated Security=True");
+
+        public Form1() 
         {
-            Console.WriteLine("Thread1 is starting");
-            for (int i =1; i<=25;i++)            
-                Console.WriteLine("Test1" + i);
-            Console.WriteLine("Thread1 is exiting");
-            
+            InitializeComponent();
         }
-        static void Test2()
+
+        private void Form1_Load(object sender, EventArgs e)
         {
-            Console.WriteLine("Thread2 is starting");
-            for (int i = 1; i <= 25; i++)            
-                Console.WriteLine("Test2" + i);
-            Console.WriteLine("Thread2 is exiting");
+
         }
-        static void Test3()
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Thread3 is starting");
-            for (int i = 1; i <= 25; i++)
-                Console.WriteLine("Test3" + i);
-            Console.WriteLine("Thread3 is exiting");
+            try
+            {
+                baglanti.Open();
+                string sqlCumlesi = "SELECT PersonelNo,Ad,Soyad,Semt,Sehir FROM Personel";
+                SqlCommand sqlCommand = new SqlCommand(sqlCumlesi, baglanti);
+                SqlDataReader sdr = sqlCommand.ExecuteReader(); //okuma islemni yapar
+                while(sdr.Read())
+                {
+                    string pno = sdr[0].ToString();
+                    string ad = sdr[1].ToString();
+                    string soyad = sdr[2].ToString();
+                    string semt = sdr[3].ToString();
+                    string sehir = sdr[4].ToString();
+
+                    richTextBox1.Text = richTextBox1.Text + pno + "" +  ad + "" + soyad + "" + semt + "" + sehir + "\n";
+
+                }
+                
+            } catch(Exception ex) {
+                MessageBox.Show("SQL Query sırasında hata bulundu!, Hata Kodu:SQLREAD01 \n" + ex.ToString());
+            }
+            finally {
+                if(baglanti != null) //baglanti zaten var yok sorgula
+                    baglanti.Close();
+            }
         }
-        static void Main()
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            Console.WriteLine("Main Thread Started");
-            Thread t1 = new Thread(Test1);
-            Thread t2 = new Thread(Test2);
-            Thread t3 = new Thread(Test3);
-            t1.Start();t2.Start();t3.Start();
-            t1.Join(); t2.Join(); t3.Join();
-            Console.WriteLine("Main thread exiting");
-            Console.ReadLine();
 
         }
     }
