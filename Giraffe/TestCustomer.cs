@@ -1,5 +1,6 @@
 //using Microsoft.Data.SqlClient;
 using System.Data.SqlClient;
+using Excel = Microsoft.Office.Interop.Excel;
 namespace ExcelDataBase
 {
     public partial class Form1 : Form
@@ -19,6 +20,21 @@ namespace ExcelDataBase
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            Excel.Application excelUygulama = new Excel.Application();
+            excelUygulama.Visible = true;
+            Excel.Workbook workbook = excelUygulama.Workbooks.Add(System.Reflection.Missing.Value); //workbook olusturduk
+            Excel.Worksheet sayfa1 = workbook.Sheets[1]; //worksheet olusturduk ve 1. index 0 degil 1 oluyor.!
+
+            string[] basliklar = { "Personel no", "Ad", "Soyad", "Semt", "Sehir" };
+            Excel.Range range;
+            for(int i = 0; i<basliklar.Length; i++)
+            {
+                range = sayfa1.Cells[1, (1 + i)];
+                range.Value2 = basliklar[i];
+            }
+
+
             try
             {
                 baglanti.Open();
