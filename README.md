@@ -6,3 +6,4 @@ Now indian guy detailed course onboard which will be end in a week
 after that projects with ASP.net will be started
 
 + Fullstack project will be shared in another repo
+CURRENTLY STARTED DOING SEVERAL PROJECTS WHICH CAN BE FOUND IN GIRAFFE DIRECTORY
