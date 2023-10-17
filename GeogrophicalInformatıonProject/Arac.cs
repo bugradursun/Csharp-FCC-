@@ -31,7 +31,7 @@ namespace GeogrophicalInformatıonProject
 
         public override string ToString()
         {
-            string str = Plate + "" + Type + "" + From + "" + To;
+            string str = Plate + "\n" + Type + "\n" + From + "\n" + To;
             return str;
 
         }

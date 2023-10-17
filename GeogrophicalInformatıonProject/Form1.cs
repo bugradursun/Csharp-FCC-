@@ -154,6 +154,7 @@ namespace GeogrophicalInformatıonProject
             {
                     GMarkerGoogle markerTmp = new GMarkerGoogle(arac.Konum, GMarkerGoogleType.green_dot);
                     markerTmp.Tag = arac.Plate; //tags will be unique 
+                    markerTmp.ToolTipText = arac.ToString(); //araclarin ustune gelince uzerlerinde yazı gozukecek
                     katman1.Markers.Add(markerTmp);
                     Console.WriteLine(arac.ToString());
                 
