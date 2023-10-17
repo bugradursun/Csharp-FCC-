@@ -3,6 +3,7 @@ using GMap.NET.MapProviders;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace GeogrophicalInformatıonProject
 {
@@ -28,7 +30,7 @@ namespace GeogrophicalInformatıonProject
 
         private void aracListesiniOlustur()
         {
-            List <Arac> list = new List<Arac>();
+            list = new List<Arac>();
             list.Add(new Arac("34CHL926","Tır","Ankara","London",new PointLatLng(40.05,32.22)));
             list.Add(new Arac("06ABC01", "Kamyon", "İstanbul", "London", new PointLatLng(39.22, 27.67)));
             list.Add(new Arac("35BGR66", "Tır", "Ankara", "İstanbul", new PointLatLng(40.67, 30.24)));
@@ -150,10 +152,11 @@ namespace GeogrophicalInformatıonProject
         {
             foreach (Arac arac in list)
             {
-                GMarkerGoogle markerTmp = new GMarkerGoogle(arac.Konum, GMarkerGoogleType.green_dot);
-                markerTmp.Tag = arac.Plate; //tags will be unique 
-                katman1.Markers.Add(markerTmp);
-                Console.WriteLine(arac.ToString());
+                    GMarkerGoogle markerTmp = new GMarkerGoogle(arac.Konum, GMarkerGoogleType.green_dot);
+                    markerTmp.Tag = arac.Plate; //tags will be unique 
+                    katman1.Markers.Add(markerTmp);
+                    Console.WriteLine(arac.ToString());
+                
             }
         }
     }
