@@ -2,8 +2,9 @@
 C# course,practices and notes
 freecodecamp done + indian guy in process currently
 FCC done,basic projects and algorithms done.
-Now indian guy detailed course onboard which will be end in a week
-after that projects with ASP.net will be started
+Currently doing several projects 
 
-+ Fullstack project will be shared in another repo
 CURRENTLY STARTED DOING SEVERAL PROJECTS WHICH CAN BE FOUND IN GIRAFFE DIRECTORY
+
+GeographyProject: You can track your company's cars and see them on the map, you can check their plates etc..
+![projearaba](https://github.com/bugradursun/Csharp-FCC-/assets/72981010/add37741-4d51-4ae9-a5bf-7a4fce8604e4)
