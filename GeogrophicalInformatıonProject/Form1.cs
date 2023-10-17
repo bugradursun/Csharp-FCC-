@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,9 @@ namespace GeogrophicalInformatıonProject
 
         GMapOverlay katman1;
         List<Arac> list;
+        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-I376K2M;Initial Catalog=ProjelerVT;Integrated Security=True");
+
+
         public Form1()
         {
             InitializeComponent();
@@ -31,12 +35,7 @@ namespace GeogrophicalInformatıonProject
         private void aracListesiniOlustur()
         {
             list = new List<Arac>();
-            list.Add(new Arac("34CHL926","Tır","Ankara","London",new PointLatLng(40.05,32.22)));
-            list.Add(new Arac("06ABC01", "Kamyon", "İstanbul", "London", new PointLatLng(39.22, 27.67)));
-            list.Add(new Arac("35BGR66", "Tır", "Ankara", "İstanbul", new PointLatLng(40.67, 30.24)));
-            list.Add(new Arac("07ADS01", "Ticari", "Ankara", "London", new PointLatLng(41.09, 12.23)));
-            list.Add(new Arac("34FB1907", "Tır", "Ankara", "Bursa", new PointLatLng(40.30, 32.47)));
-
+            // veritabanindan ADO.Net ile bilgilerin cekilmesi!
 
         }
 
