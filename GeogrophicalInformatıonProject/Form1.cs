@@ -129,9 +129,22 @@ namespace GeogrophicalInformatıonProject
 
         private void map_OnMarkerClick(GMapMarker item, MouseEventArgs e)
         {
-            int markerId = (int)item.Tag;
-            Console.WriteLine("id:" + markerId +"olan markera tıklandı");
+            //int markerId = (int)item.Tag;
+            //Console.WriteLine("id:" + markerId +"olan markera tıklandı");
 
+            string secilenAracPlakasi = (string)item.Tag;
+            foreach(Arac arac in list)
+            {
+                if(secilenAracPlakasi.Equals(arac.Plate))
+                {
+                    textBox3.Text = secilenAracPlakasi;
+                    textBox4.Text = arac.Type;
+                    textBox5.Text = arac.From;
+                    textBox6.Text = arac.To;
+                    break;
+                }
+            }
+                 
            
         }
 
@@ -156,9 +169,15 @@ namespace GeogrophicalInformatıonProject
                     markerTmp.Tag = arac.Plate; //tags will be unique 
                     markerTmp.ToolTipText = arac.ToString(); //araclarin ustune gelince uzerlerinde yazı gozukecek
                     katman1.Markers.Add(markerTmp);
+                markerTmp.ToolTipMode = MarkerTooltipMode.OnMouseOver;
                     Console.WriteLine(arac.ToString());
                 
             }
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
