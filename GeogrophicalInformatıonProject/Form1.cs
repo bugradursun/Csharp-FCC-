@@ -18,10 +18,24 @@ namespace GeogrophicalInformatıonProject
     {
 
         GMapOverlay katman1;
+        List<Arac> list;
         public Form1()
         {
             InitializeComponent();
             initializeMap();
+            aracListesiniOlustur();
+        }
+
+        private void aracListesiniOlustur()
+        {
+            List <Arac> list = new List<Arac>();
+            list.Add(new Arac("34CHL926","Tır","Ankara","London",new PointLatLng(40.05,32.22)));
+            list.Add(new Arac("06ABC01", "Kamyon", "İstanbul", "London", new PointLatLng(39.22, 27.67)));
+            list.Add(new Arac("35BGR66", "Tır", "Ankara", "İstanbul", new PointLatLng(40.67, 30.24)));
+            list.Add(new Arac("07ADS01", "Ticari", "Ankara", "London", new PointLatLng(41.09, 12.23)));
+            list.Add(new Arac("34FB1907", "Tır", "Ankara", "Bursa", new PointLatLng(40.30, 32.47)));
+
+
         }
 
         private void initializeMap()
@@ -33,6 +47,11 @@ namespace GeogrophicalInformatıonProject
             map.MinZoom = 3;
             map.MaxZoom = 25;
             katman1 = new GMapOverlay();
+
+            //Overlay(katman) olusturmamiz lazim
+            //Harita uzerinde goruntelenecek tum componentleri bu katman eklememiz gerekmekte
+            //ilk olarak yeni olusturulan katmanı harita nesnesine eklemeliyiz
+            map.Overlays.Add(katman1);
         }
 
         private void gMapControl1_Load(object sender, EventArgs e)
@@ -56,12 +75,6 @@ namespace GeogrophicalInformatıonProject
             GMarkerGoogle marker2 = new GMarkerGoogle(lokasyon1, GMarkerGoogleType.orange);
             marker2.Tag = 102;
 
-            //Overlay(katman) olusturmamiz lazim
-            //Harita uzerinde goruntelenecek tum componentleri bu katman eklememiz gerekmekte
-
-            
-            //ilk olarak yeni olusturulan katmanı harita nesnesine eklemeliyiz
-            map.Overlays.Add(katman1);
 
             //daha sonra marker(lar) ı eklemeliyiz
             //ÖNCE OVERLAY(KATMAN) OLUSTURUP SONRA MARKER EKLİYORUZ !!
@@ -131,6 +144,17 @@ namespace GeogrophicalInformatıonProject
             GMarkerGoogle marker2 = new GMarkerGoogle(lokasyon2, GMarkerGoogleType.red_dot);
             marker2.Tag = 102;
             katman1.Markers.Add(marker2);
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            foreach (Arac arac in list)
+            {
+                GMarkerGoogle markerTmp = new GMarkerGoogle(arac.Konum, GMarkerGoogleType.green_dot);
+                markerTmp.Tag = arac.Plate; //tags will be unique 
+                katman1.Markers.Add(markerTmp);
+                Console.WriteLine(arac.ToString());
+            }
         }
     }
 }

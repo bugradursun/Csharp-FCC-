@@ -46,6 +46,7 @@
             this.buttton2 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // map
@@ -227,11 +228,22 @@
             this.label10.TabIndex = 18;
             this.label10.Text = "Marker2";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(908, 551);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(401, 62);
+            this.button3.TabIndex = 19;
+            this.button3.Text = "Araclari Haritaya Yerlestir";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1321, 733);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.buttton2);
@@ -279,6 +291,7 @@
         private System.Windows.Forms.Button buttton2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button3;
     }
 }
 
