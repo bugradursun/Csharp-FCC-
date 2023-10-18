@@ -1,0 +1,16 @@
+C:\Users\bugra\Desktop\C#-Course\Giraffe\WinformMaxGui\bin\Debug\net6.0-windows\WinformMaxGui.exe
+C:\Users\bugra\Desktop\C#-Course\Giraffe\WinformMaxGui\bin\Debug\net6.0-windows\WinformMaxGui.deps.json
+C:\Users\bugra\Desktop\C#-Course\Giraffe\WinformMaxGui\bin\Debug\net6.0-windows\WinformMaxGui.runtimeconfig.json
+C:\Users\bugra\Desktop\C#-Course\Giraffe\WinformMaxGui\bin\Debug\net6.0-windows\WinformMaxGui.dll
+C:\Users\bugra\Desktop\C#-Course\Giraffe\WinformMaxGui\bin\Debug\net6.0-windows\WinformMaxGui.pdb
+C:\Users\bugra\Desktop\C#-Course\Giraffe\WinformMaxGui\obj\Debug\net6.0-windows\WinformMaxGui.Form1.resources
+C:\Users\bugra\Desktop\C#-Course\Giraffe\WinformMaxGui\obj\Debug\net6.0-windows\WinformMaxGui.csproj.GenerateResource.cache
+C:\Users\bugra\Desktop\C#-Course\Giraffe\WinformMaxGui\obj\Debug\net6.0-windows\WinformMaxGui.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bugra\Desktop\C#-Course\Giraffe\WinformMaxGui\obj\Debug\net6.0-windows\WinformMaxGui.AssemblyInfoInputs.cache
+C:\Users\bugra\Desktop\C#-Course\Giraffe\WinformMaxGui\obj\Debug\net6.0-windows\WinformMaxGui.AssemblyInfo.cs
+C:\Users\bugra\Desktop\C#-Course\Giraffe\WinformMaxGui\obj\Debug\net6.0-windows\WinformMaxGui.csproj.CoreCompileInputs.cache
+C:\Users\bugra\Desktop\C#-Course\Giraffe\WinformMaxGui\obj\Debug\net6.0-windows\WinformMaxGui.dll
+C:\Users\bugra\Desktop\C#-Course\Giraffe\WinformMaxGui\obj\Debug\net6.0-windows\refint\WinformMaxGui.dll
+C:\Users\bugra\Desktop\C#-Course\Giraffe\WinformMaxGui\obj\Debug\net6.0-windows\WinformMaxGui.pdb
+C:\Users\bugra\Desktop\C#-Course\Giraffe\WinformMaxGui\obj\Debug\net6.0-windows\WinformMaxGui.genruntimeconfig.cache
+C:\Users\bugra\Desktop\C#-Course\Giraffe\WinformMaxGui\obj\Debug\net6.0-windows\ref\WinformMaxGui.dll
