@@ -7,4 +7,4 @@ Currently doing several projects
 CURRENTLY STARTED DOING SEVERAL PROJECTS WHICH CAN BE FOUND IN GIRAFFE DIRECTORY
 
 GeographyProject: You can track your company's cars and see them on the map, you can check their plates etc..
-![projearaba](https://github.com/bugradursun/Csharp-FCC-/assets/72981010/d3e8a199-8483-4b22-9602-422e5190a0c6)
+![Ekran Görüntüsü (26)](https://github.com/bugradursun/Csharp-FCC-/assets/72981010/e283947a-b061-4b6f-bb61-097359e3a6ff)
