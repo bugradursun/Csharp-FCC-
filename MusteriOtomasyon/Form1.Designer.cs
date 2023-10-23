@@ -31,18 +31,19 @@
             panel1 = new Panel();
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
-            textBoxMusteriId = new TextBox();
-            textBoxAd = new TextBox();
-            textBoxSoyad = new TextBox();
-            textBoxAylikGelir = new TextBox();
-            textBoxKrediyeUygunMu = new TextBox();
-            textBoxSehir = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
+            buttonEkle = new Button();
             label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            textBoxSehir = new TextBox();
+            textBoxKrediyeUygunMu = new TextBox();
+            textBoxAylikGelir = new TextBox();
+            textBoxSoyad = new TextBox();
+            textBoxAd = new TextBox();
+            textBoxMusteriId = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
@@ -73,6 +74,7 @@
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel2.Controls.Add(buttonEkle);
             panel2.Controls.Add(label6);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(label4);
@@ -90,84 +92,24 @@
             panel2.Size = new Size(775, 154);
             panel2.TabIndex = 1;
             // 
-            // textBoxMusteriId
+            // buttonEkle
             // 
-            textBoxMusteriId.Enabled = false;
-            textBoxMusteriId.Location = new Point(87, 26);
-            textBoxMusteriId.Name = "textBoxMusteriId";
-            textBoxMusteriId.Size = new Size(125, 27);
-            textBoxMusteriId.TabIndex = 0;
+            buttonEkle.Location = new Point(511, 24);
+            buttonEkle.Name = "buttonEkle";
+            buttonEkle.Size = new Size(94, 29);
+            buttonEkle.TabIndex = 12;
+            buttonEkle.Text = "Ekle";
+            buttonEkle.UseVisualStyleBackColor = true;
+            buttonEkle.Click += buttonEkle_Click;
             // 
-            // textBoxAd
+            // label6
             // 
-            textBoxAd.Location = new Point(86, 59);
-            textBoxAd.Name = "textBoxAd";
-            textBoxAd.Size = new Size(125, 27);
-            textBoxAd.TabIndex = 1;
-            // 
-            // textBoxSoyad
-            // 
-            textBoxSoyad.Location = new Point(86, 92);
-            textBoxSoyad.Name = "textBoxSoyad";
-            textBoxSoyad.Size = new Size(125, 27);
-            textBoxSoyad.TabIndex = 2;
-            // 
-            // textBoxAylikGelir
-            // 
-            textBoxAylikGelir.Location = new Point(342, 26);
-            textBoxAylikGelir.Name = "textBoxAylikGelir";
-            textBoxAylikGelir.Size = new Size(125, 27);
-            textBoxAylikGelir.TabIndex = 3;
-            // 
-            // textBoxKrediyeUygunMu
-            // 
-            textBoxKrediyeUygunMu.Location = new Point(342, 59);
-            textBoxKrediyeUygunMu.Name = "textBoxKrediyeUygunMu";
-            textBoxKrediyeUygunMu.Size = new Size(125, 27);
-            textBoxKrediyeUygunMu.TabIndex = 4;
-            // 
-            // textBoxSehir
-            // 
-            textBoxSehir.Location = new Point(342, 92);
-            textBoxSehir.Name = "textBoxSehir";
-            textBoxSehir.Size = new Size(125, 27);
-            textBoxSehir.TabIndex = 5;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(3, 29);
-            label1.Name = "label1";
-            label1.Size = new Size(78, 20);
-            label1.TabIndex = 6;
-            label1.Text = "Musteri Id:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(-1, 66);
-            label2.Name = "label2";
-            label2.Size = new Size(31, 20);
-            label2.TabIndex = 7;
-            label2.Text = "Ad:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(3, 99);
-            label3.Name = "label3";
-            label3.Size = new Size(53, 20);
-            label3.TabIndex = 8;
-            label3.Text = "Soyad:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(249, 29);
-            label4.Name = "label4";
-            label4.Size = new Size(79, 20);
-            label4.TabIndex = 9;
-            label4.Text = "Aylik Gelir:";
+            label6.AutoSize = true;
+            label6.Location = new Point(249, 99);
+            label6.Name = "label6";
+            label6.Size = new Size(42, 20);
+            label6.TabIndex = 11;
+            label6.Text = "Sehir";
             // 
             // label5
             // 
@@ -178,14 +120,85 @@
             label5.TabIndex = 10;
             label5.Text = "Kredi Uygunlugu";
             // 
-            // label6
+            // label4
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(249, 99);
-            label6.Name = "label6";
-            label6.Size = new Size(42, 20);
-            label6.TabIndex = 11;
-            label6.Text = "Sehir";
+            label4.AutoSize = true;
+            label4.Location = new Point(249, 29);
+            label4.Name = "label4";
+            label4.Size = new Size(79, 20);
+            label4.TabIndex = 9;
+            label4.Text = "Aylik Gelir:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(3, 99);
+            label3.Name = "label3";
+            label3.Size = new Size(53, 20);
+            label3.TabIndex = 8;
+            label3.Text = "Soyad:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(-1, 66);
+            label2.Name = "label2";
+            label2.Size = new Size(31, 20);
+            label2.TabIndex = 7;
+            label2.Text = "Ad:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(3, 29);
+            label1.Name = "label1";
+            label1.Size = new Size(78, 20);
+            label1.TabIndex = 6;
+            label1.Text = "Musteri Id:";
+            // 
+            // textBoxSehir
+            // 
+            textBoxSehir.Location = new Point(342, 92);
+            textBoxSehir.Name = "textBoxSehir";
+            textBoxSehir.Size = new Size(125, 27);
+            textBoxSehir.TabIndex = 5;
+            // 
+            // textBoxKrediyeUygunMu
+            // 
+            textBoxKrediyeUygunMu.Enabled = false;
+            textBoxKrediyeUygunMu.Location = new Point(342, 59);
+            textBoxKrediyeUygunMu.Name = "textBoxKrediyeUygunMu";
+            textBoxKrediyeUygunMu.Size = new Size(125, 27);
+            textBoxKrediyeUygunMu.TabIndex = 4;
+            // 
+            // textBoxAylikGelir
+            // 
+            textBoxAylikGelir.Location = new Point(342, 26);
+            textBoxAylikGelir.Name = "textBoxAylikGelir";
+            textBoxAylikGelir.Size = new Size(125, 27);
+            textBoxAylikGelir.TabIndex = 3;
+            // 
+            // textBoxSoyad
+            // 
+            textBoxSoyad.Location = new Point(86, 92);
+            textBoxSoyad.Name = "textBoxSoyad";
+            textBoxSoyad.Size = new Size(125, 27);
+            textBoxSoyad.TabIndex = 2;
+            // 
+            // textBoxAd
+            // 
+            textBoxAd.Location = new Point(86, 59);
+            textBoxAd.Name = "textBoxAd";
+            textBoxAd.Size = new Size(125, 27);
+            textBoxAd.TabIndex = 1;
+            // 
+            // textBoxMusteriId
+            // 
+            textBoxMusteriId.Enabled = false;
+            textBoxMusteriId.Location = new Point(87, 26);
+            textBoxMusteriId.Name = "textBoxMusteriId";
+            textBoxMusteriId.Size = new Size(125, 27);
+            textBoxMusteriId.TabIndex = 0;
             // 
             // Form1
             // 
@@ -221,5 +234,6 @@
         private Label label3;
         private Label label2;
         private Label label1;
+        private Button buttonEkle;
     }
 }

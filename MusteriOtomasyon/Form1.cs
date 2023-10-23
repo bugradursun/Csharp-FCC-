@@ -55,7 +55,37 @@ namespace MusteriOtomasyon
             textBoxAylikGelir.Text = dataGridView1.Rows[secilenSatir].Cells[3].Value.ToString();
             textBoxKrediyeUygunMu.Text = dataGridView1.Rows[secilenSatir].Cells[4].Value.ToString();
             textBoxSehir.Text = dataGridView1.Rows[secilenSatir].Cells[5].Value.ToString();
-           
+
+        }
+
+        private void buttonEkle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                baglanti.Open();
+                SqlCommand sqlCommand = new SqlCommand("INSERT INTO Musteri (Ad, Soyad, AylikGelir, " +
+                    "KrediyeUygunMu, Sehir) VALUES(@P1, @P2, @P3, @P4, @P5)", baglanti);
+                sqlCommand.Parameters.AddWithValue("@P1", textBoxAd.Text);
+                sqlCommand.Parameters.AddWithValue("@P2", textBoxSoyad.Text);
+                sqlCommand.Parameters.AddWithValue("@P3", textBoxAylikGelir.Text);
+                if (Convert.ToInt32(textBoxAylikGelir.Text) >= 10000)
+                {
+                    sqlCommand.Parameters.AddWithValue("@P4", 1); //adding 1 value to P4 which is KrediyeUygunMu
+                }
+                else
+                {
+                    sqlCommand.Parameters.AddWithValue("@P4", 0);
+                }
+                sqlCommand.Parameters.AddWithValue("@P5", textBoxSehir.Text);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+
+            }
         }
     }
 }
