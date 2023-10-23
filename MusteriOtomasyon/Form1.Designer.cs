@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            panel2 = new Panel();
             dataGridView1 = new DataGridView();
+            panel2 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -44,16 +44,9 @@
             panel1.Size = new Size(776, 321);
             panel1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel2.Location = new Point(13, 339);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(775, 154);
-            panel2.TabIndex = 1;
-            // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
@@ -62,6 +55,14 @@
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(776, 321);
             dataGridView1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel2.Location = new Point(13, 339);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(775, 154);
+            panel2.TabIndex = 1;
             // 
             // Form1
             // 
