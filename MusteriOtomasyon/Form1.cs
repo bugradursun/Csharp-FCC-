@@ -15,6 +15,8 @@ namespace MusteriOtomasyon
         private void Form1_Load(object sender, EventArgs e)
         {
             verileriGoruntule();
+            dataGridView1.ClearSelection();
+            textBoxMusteriId.Text = "0"; //uygulamayi ilk calistirdigimizdaki gozukecek olan musteri id 
         }
         private void verileriGoruntule()
         {
@@ -44,6 +46,16 @@ namespace MusteriOtomasyon
 
         }
 
-
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilenSatir = dataGridView1.SelectedCells[0].RowIndex;
+            textBoxMusteriId.Text = dataGridView1.Rows[secilenSatir].Cells[0].Value.ToString();
+            textBoxAd.Text = dataGridView1.Rows[secilenSatir].Cells[1].Value.ToString();
+            textBoxSoyad.Text = dataGridView1.Rows[secilenSatir].Cells[2].Value.ToString();
+            textBoxAylikGelir.Text = dataGridView1.Rows[secilenSatir].Cells[3].Value.ToString();
+            textBoxKrediyeUygunMu.Text = dataGridView1.Rows[secilenSatir].Cells[4].Value.ToString();
+            textBoxSehir.Text = dataGridView1.Rows[secilenSatir].Cells[5].Value.ToString();
+           
+        }
     }
 }
