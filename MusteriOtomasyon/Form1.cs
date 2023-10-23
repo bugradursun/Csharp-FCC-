@@ -1,5 +1,6 @@
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing.Text;
 
 namespace MusteriOtomasyon
 {
@@ -15,7 +16,7 @@ namespace MusteriOtomasyon
         private void Form1_Load(object sender, EventArgs e)
         {
             verileriGoruntule();
-            dataGridView1.ClearSelection();
+            //dataGridView1.ClearSelection();
             textBoxMusteriId.Text = "0"; //uygulamayi ilk calistirdigimizdaki gozukecek olan musteri id 
         }
         private void verileriGoruntule()
@@ -43,7 +44,7 @@ namespace MusteriOtomasyon
                     baglanti.Close();
                 }
             }
-
+            dataGridView1.ClearSelection();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -53,8 +54,15 @@ namespace MusteriOtomasyon
             textBoxAd.Text = dataGridView1.Rows[secilenSatir].Cells[1].Value.ToString();
             textBoxSoyad.Text = dataGridView1.Rows[secilenSatir].Cells[2].Value.ToString();
             textBoxAylikGelir.Text = dataGridView1.Rows[secilenSatir].Cells[3].Value.ToString();
-            textBoxKrediyeUygunMu.Text = dataGridView1.Rows[secilenSatir].Cells[4].Value.ToString();
             textBoxSehir.Text = dataGridView1.Rows[secilenSatir].Cells[5].Value.ToString();
+
+
+            //textBoxKrediyeUygunMu.Text = dataGridView1.Rows[secilenSatir].Cells[4].Value.ToString();
+            string metin = dataGridView1.Rows[secilenSatir].Cells[4].Value.ToString();
+            if (metin.Equals("True"))
+                textBoxKrediyeUygunMu.Text = "Evet";
+            else
+                textBoxKrediyeUygunMu.Text = "Hayir";
 
         }
 
@@ -77,15 +85,36 @@ namespace MusteriOtomasyon
                     sqlCommand.Parameters.AddWithValue("@P4", 0);
                 }
                 sqlCommand.Parameters.AddWithValue("@P5", textBoxSehir.Text);
+                sqlCommand.ExecuteNonQuery(); //SELECT YOKSA YANÝ QUERY YOKTUR VE UPDATE-INSERT-DELETE DURUMLARINDA EXECUTENONQUERY KULLAN  
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("Kayýt eklenirken hata olustu, Hata Kodu : H002\n" + ex.Message);
             }
             finally
             {
-
+                if (baglanti != null)
+                {
+                    baglanti.Close();
+                }
+                verileriGoruntule();
+                metinKutulariniTemizle();
             }
+
+        }
+        private void metinKutulariniTemizle()
+        {
+            textBoxAd.Clear();
+            textBoxSoyad.Clear();
+            textBoxAylikGelir.Clear();
+            textBoxKrediyeUygunMu.Clear();
+            textBoxSehir.Clear();
+            textBoxMusteriId.Text = "0";
+        }
+
+        private void buttonTemizle_Click(object sender, EventArgs e)
+        {
+            metinKutulariniTemizle();
         }
     }
 }

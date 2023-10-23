@@ -44,6 +44,7 @@
             textBoxSoyad = new TextBox();
             textBoxAd = new TextBox();
             textBoxMusteriId = new TextBox();
+            buttonTemizle = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
@@ -74,6 +75,7 @@
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel2.Controls.Add(buttonTemizle);
             panel2.Controls.Add(buttonEkle);
             panel2.Controls.Add(label6);
             panel2.Controls.Add(label5);
@@ -200,6 +202,16 @@
             textBoxMusteriId.Size = new Size(125, 27);
             textBoxMusteriId.TabIndex = 0;
             // 
+            // buttonTemizle
+            // 
+            buttonTemizle.Location = new Point(511, 66);
+            buttonTemizle.Name = "buttonTemizle";
+            buttonTemizle.Size = new Size(94, 29);
+            buttonTemizle.TabIndex = 13;
+            buttonTemizle.Text = "Temizle";
+            buttonTemizle.UseVisualStyleBackColor = true;
+            buttonTemizle.Click += buttonTemizle_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -235,5 +247,6 @@
         private Label label2;
         private Label label1;
         private Button buttonEkle;
+        private Button buttonTemizle;
     }
 }
