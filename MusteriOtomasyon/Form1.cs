@@ -193,5 +193,15 @@ namespace MusteriOtomasyon
                 metinKutulariniTemizle();
             }
         }
+
+        private void buttonAra_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e) //aylik gelire gore arama butonu click eventi
+        {
+
+        }
     }
 }

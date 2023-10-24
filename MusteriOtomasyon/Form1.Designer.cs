@@ -47,6 +47,8 @@
             textBoxSoyad = new TextBox();
             textBoxAd = new TextBox();
             textBoxMusteriId = new TextBox();
+            buttonAra = new Button();
+            button1 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
@@ -77,6 +79,8 @@
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(buttonAra);
             panel2.Controls.Add(buttonDegistir);
             panel2.Controls.Add(buttonSil);
             panel2.Controls.Add(buttonTemizle);
@@ -100,7 +104,7 @@
             // 
             // buttonDegistir
             // 
-            buttonDegistir.Location = new Point(648, 24);
+            buttonDegistir.Location = new Point(491, 121);
             buttonDegistir.Name = "buttonDegistir";
             buttonDegistir.Size = new Size(94, 29);
             buttonDegistir.TabIndex = 15;
@@ -110,7 +114,7 @@
             // 
             // buttonSil
             // 
-            buttonSil.Location = new Point(511, 101);
+            buttonSil.Location = new Point(491, 86);
             buttonSil.Name = "buttonSil";
             buttonSil.Size = new Size(94, 29);
             buttonSil.TabIndex = 14;
@@ -120,7 +124,7 @@
             // 
             // buttonTemizle
             // 
-            buttonTemizle.Location = new Point(511, 62);
+            buttonTemizle.Location = new Point(491, 53);
             buttonTemizle.Name = "buttonTemizle";
             buttonTemizle.Size = new Size(94, 29);
             buttonTemizle.TabIndex = 13;
@@ -130,7 +134,7 @@
             // 
             // buttonEkle
             // 
-            buttonEkle.Location = new Point(511, 24);
+            buttonEkle.Location = new Point(491, 20);
             buttonEkle.Name = "buttonEkle";
             buttonEkle.Size = new Size(94, 29);
             buttonEkle.TabIndex = 12;
@@ -194,7 +198,7 @@
             // 
             // textBoxSehir
             // 
-            textBoxSehir.Location = new Point(342, 92);
+            textBoxSehir.Location = new Point(342, 99);
             textBoxSehir.Name = "textBoxSehir";
             textBoxSehir.Size = new Size(125, 27);
             textBoxSehir.TabIndex = 5;
@@ -216,7 +220,7 @@
             // 
             // textBoxSoyad
             // 
-            textBoxSoyad.Location = new Point(86, 92);
+            textBoxSoyad.Location = new Point(87, 92);
             textBoxSoyad.Name = "textBoxSoyad";
             textBoxSoyad.Size = new Size(125, 27);
             textBoxSoyad.TabIndex = 2;
@@ -235,6 +239,26 @@
             textBoxMusteriId.Name = "textBoxMusteriId";
             textBoxMusteriId.Size = new Size(125, 27);
             textBoxMusteriId.TabIndex = 0;
+            // 
+            // buttonAra
+            // 
+            buttonAra.Location = new Point(611, 20);
+            buttonAra.Name = "buttonAra";
+            buttonAra.Size = new Size(133, 29);
+            buttonAra.TabIndex = 17;
+            buttonAra.Text = "Filtreleyerek Ara";
+            buttonAra.UseVisualStyleBackColor = true;
+            buttonAra.Click += buttonAra_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(611, 62);
+            button1.Name = "button1";
+            button1.Size = new Size(161, 29);
+            button1.TabIndex = 18;
+            button1.Text = "Aylik Gelire Gore Ara";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // Form1
             // 
@@ -274,5 +298,7 @@
         private Button buttonTemizle;
         private Button buttonSil;
         private Button buttonDegistir;
+        private Button buttonAra;
+        private Button button1;
     }
 }
