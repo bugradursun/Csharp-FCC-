@@ -31,6 +31,8 @@
             panel1 = new Panel();
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
+            buttonDegistir = new Button();
+            buttonSil = new Button();
             buttonTemizle = new Button();
             buttonEkle = new Button();
             label6 = new Label();
@@ -45,7 +47,6 @@
             textBoxSoyad = new TextBox();
             textBoxAd = new TextBox();
             textBoxMusteriId = new TextBox();
-            buttonSil = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
@@ -76,6 +77,7 @@
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel2.Controls.Add(buttonDegistir);
             panel2.Controls.Add(buttonSil);
             panel2.Controls.Add(buttonTemizle);
             panel2.Controls.Add(buttonEkle);
@@ -95,6 +97,26 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(775, 154);
             panel2.TabIndex = 1;
+            // 
+            // buttonDegistir
+            // 
+            buttonDegistir.Location = new Point(648, 24);
+            buttonDegistir.Name = "buttonDegistir";
+            buttonDegistir.Size = new Size(94, 29);
+            buttonDegistir.TabIndex = 15;
+            buttonDegistir.Text = "Degistir";
+            buttonDegistir.UseVisualStyleBackColor = true;
+            buttonDegistir.Click += buttonDegistir_Click;
+            // 
+            // buttonSil
+            // 
+            buttonSil.Location = new Point(511, 101);
+            buttonSil.Name = "buttonSil";
+            buttonSil.Size = new Size(94, 29);
+            buttonSil.TabIndex = 14;
+            buttonSil.Text = "Sil";
+            buttonSil.UseVisualStyleBackColor = true;
+            buttonSil.Click += buttonSil_Click;
             // 
             // buttonTemizle
             // 
@@ -214,16 +236,6 @@
             textBoxMusteriId.Size = new Size(125, 27);
             textBoxMusteriId.TabIndex = 0;
             // 
-            // buttonSil
-            // 
-            buttonSil.Location = new Point(511, 101);
-            buttonSil.Name = "buttonSil";
-            buttonSil.Size = new Size(94, 29);
-            buttonSil.TabIndex = 14;
-            buttonSil.Text = "Sil";
-            buttonSil.UseVisualStyleBackColor = true;
-            buttonSil.Click += buttonSil_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -261,5 +273,6 @@
         private Button buttonEkle;
         private Button buttonTemizle;
         private Button buttonSil;
+        private Button buttonDegistir;
     }
 }

@@ -119,7 +119,7 @@ namespace MusteriOtomasyon
 
         private void buttonSil_Click(object sender, EventArgs e)
         {
-            if(textBoxMusteriId.Text.Equals("0"))
+            if (textBoxMusteriId.Text.Equals("0"))
             {
                 MessageBox.Show("Lutfen bir musteri seciniz!");
             }
@@ -130,21 +130,67 @@ namespace MusteriOtomasyon
                     baglanti.Open();
                     SqlCommand sqlCommand = new SqlCommand("DELETE FROM Musteri WHERE MusteriId = @P1", baglanti);
                     sqlCommand.Parameters.AddWithValue("@P1", textBoxMusteriId.Text);
-                    sqlCommand.ExecuteNonQuery(); 
+                    sqlCommand.ExecuteNonQuery();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show("Kayýt silinirken hata olustu, Hata Kodu:H003\n" + ex.Message);
                 }
                 finally
                 {
-                    if(baglanti != null)
+                    if (baglanti != null)
                     {
                         baglanti.Close();
                     }
                 }
                 verileriGoruntule(); //secili veriler silindikten sonra guncel veriler goruntulensin
                 metinKutulariniTemizle(); //silindikten sonra datagridde veriler takili kalmamsi icin!
+            }
+        }
+
+        private void buttonDegistir_Click(object sender, EventArgs e)
+        {
+            if (textBoxMusteriId.Text.Equals("0"))
+            {
+                MessageBox.Show("Lutfen musteri seciniz");
+            }
+            else
+            {
+                try
+                {
+                    baglanti.Open();
+                    SqlCommand sqlCommand = new SqlCommand("UPDATE Musteri  SET Ad=@P1," +
+                                     " Soyad = @P2, AylikGelir = @P3 , KrediyeUygunMu = @P4, Sehir= @P5  " +
+                                     "WHERE MusteriId = @P6", baglanti);
+                    sqlCommand.Parameters.AddWithValue("@P1", textBoxAd.Text);
+                    sqlCommand.Parameters.AddWithValue("@P2", textBoxSoyad.Text);
+                    sqlCommand.Parameters.AddWithValue("@P3", textBoxAylikGelir.Text);
+                    sqlCommand.Parameters.AddWithValue("@P5", textBoxSehir.Text);
+                    if (Convert.ToInt32(textBoxAylikGelir.Text) >= 10000)
+                    {
+                        sqlCommand.Parameters.AddWithValue("@P4", "1");
+                    }
+                    else
+                    {
+                        sqlCommand.Parameters.AddWithValue("@P4", "0");
+                    }
+                    sqlCommand.Parameters.AddWithValue("@P6", textBoxMusteriId.Text);
+                    sqlCommand.ExecuteNonQuery();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Kayýt güncellenirken hata olustu, Hata Kodu:H004\n" + ex.Message);
+                }
+                finally
+                {
+                    if (baglanti != null)
+                    {
+                        baglanti.Close();
+                    }
+                }
+                verileriGoruntule();
+                metinKutulariniTemizle();
             }
         }
     }
