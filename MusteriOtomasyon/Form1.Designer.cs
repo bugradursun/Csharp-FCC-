@@ -31,6 +31,9 @@
             panel1 = new Panel();
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
+            button2 = new Button();
+            button1 = new Button();
+            buttonAra = new Button();
             buttonDegistir = new Button();
             buttonSil = new Button();
             buttonTemizle = new Button();
@@ -47,8 +50,6 @@
             textBoxSoyad = new TextBox();
             textBoxAd = new TextBox();
             textBoxMusteriId = new TextBox();
-            buttonAra = new Button();
-            button1 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
@@ -79,6 +80,7 @@
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel2.Controls.Add(button2);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(buttonAra);
             panel2.Controls.Add(buttonDegistir);
@@ -101,6 +103,36 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(775, 154);
             panel2.TabIndex = 1;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(591, 108);
+            button2.Name = "button2";
+            button2.Size = new Size(181, 29);
+            button2.TabIndex = 19;
+            button2.Text = "Tum Kayitlari Goruntule";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(591, 62);
+            button1.Name = "button1";
+            button1.Size = new Size(181, 29);
+            button1.TabIndex = 18;
+            button1.Text = "Aylik Gelire Gore Ara";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // buttonAra
+            // 
+            buttonAra.Location = new Point(591, 20);
+            buttonAra.Name = "buttonAra";
+            buttonAra.Size = new Size(181, 29);
+            buttonAra.TabIndex = 17;
+            buttonAra.Text = "Filtreleyerek Ara";
+            buttonAra.UseVisualStyleBackColor = true;
+            buttonAra.Click += buttonAra_Click;
             // 
             // buttonDegistir
             // 
@@ -240,35 +272,16 @@
             textBoxMusteriId.Size = new Size(125, 27);
             textBoxMusteriId.TabIndex = 0;
             // 
-            // buttonAra
-            // 
-            buttonAra.Location = new Point(611, 20);
-            buttonAra.Name = "buttonAra";
-            buttonAra.Size = new Size(133, 29);
-            buttonAra.TabIndex = 17;
-            buttonAra.Text = "Filtreleyerek Ara";
-            buttonAra.UseVisualStyleBackColor = true;
-            buttonAra.Click += buttonAra_Click;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(611, 62);
-            button1.Name = "button1";
-            button1.Size = new Size(161, 29);
-            button1.TabIndex = 18;
-            button1.Text = "Aylik Gelire Gore Ara";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DeepSkyBlue;
             ClientSize = new Size(800, 505);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Musteri Otomasyon";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -300,5 +313,6 @@
         private Button buttonDegistir;
         private Button buttonAra;
         private Button button1;
+        private Button button2;
     }
 }

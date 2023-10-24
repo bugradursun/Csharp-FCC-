@@ -194,14 +194,73 @@ namespace MusteriOtomasyon
             }
         }
 
-        private void buttonAra_Click(object sender, EventArgs e)
+        private void buttonAra_Click(object sender, EventArgs e) //ad,soyad veya sehire gore arama butonu click eventi
         {
+            try
+            {
+
+                string sorgu = "SELECT * FROM Musteri WHERE Ad LIKE '" + textBoxAd.Text + "%'"
+                    + "AND Soyad LIKE '" + textBoxSoyad.Text + "%'"
+                    + "AND Sehir LIKE '" + textBoxSehir.Text + "%'";
+
+                SqlDataAdapter da = new SqlDataAdapter(sorgu, baglanti);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    dataGridView1.DataSource = dt;
+                }
+                dataGridView1.ClearSelection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Kayit aramasý yapýlýrken hata olustu, Hata Kodu: H005\n" + ex.Message);
+            }
+            finally
+            {
+                if (baglanti != null)
+                {
+                    baglanti.Close();
+                }
+            }
 
         }
 
         private void button1_Click(object sender, EventArgs e) //aylik gelire gore arama butonu click eventi
         {
+            try
+            {
 
+                string sorgu = "SELECT * FROM Musteri WHERE AylikGelir = " + textBoxAylikGelir.Text;
+
+                SqlDataAdapter da = new SqlDataAdapter(sorgu, baglanti);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    dataGridView1.DataSource = dt;
+                }
+                dataGridView1.ClearSelection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Kayit aramasý yapýlýrken hata olustu, Hata Kodu: H006\n" + ex.Message);
+            }
+            finally
+            {
+                if (baglanti != null)
+                {
+                    baglanti.Close();
+                }
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e) //tumunu goruntule methodu !
+        {
+            verileriGoruntule();
         }
     }
 }
