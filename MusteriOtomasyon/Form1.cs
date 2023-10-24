@@ -116,5 +116,36 @@ namespace MusteriOtomasyon
         {
             metinKutulariniTemizle();
         }
+
+        private void buttonSil_Click(object sender, EventArgs e)
+        {
+            if(textBoxMusteriId.Text.Equals("0"))
+            {
+                MessageBox.Show("Lutfen bir musteri seciniz!");
+            }
+            else
+            {
+                try
+                {
+                    baglanti.Open();
+                    SqlCommand sqlCommand = new SqlCommand("DELETE FROM Musteri WHERE MusteriId = @P1", baglanti);
+                    sqlCommand.Parameters.AddWithValue("@P1", textBoxMusteriId.Text);
+                    sqlCommand.ExecuteNonQuery(); 
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Kayýt silinirken hata olustu, Hata Kodu:H003\n" + ex.Message);
+                }
+                finally
+                {
+                    if(baglanti != null)
+                    {
+                        baglanti.Close();
+                    }
+                }
+                verileriGoruntule(); //secili veriler silindikten sonra guncel veriler goruntulensin
+                metinKutulariniTemizle(); //silindikten sonra datagridde veriler takili kalmamsi icin!
+            }
+        }
     }
 }

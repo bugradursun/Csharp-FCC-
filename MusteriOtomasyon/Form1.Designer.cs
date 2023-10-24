@@ -31,6 +31,7 @@
             panel1 = new Panel();
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
+            buttonTemizle = new Button();
             buttonEkle = new Button();
             label6 = new Label();
             label5 = new Label();
@@ -44,7 +45,7 @@
             textBoxSoyad = new TextBox();
             textBoxAd = new TextBox();
             textBoxMusteriId = new TextBox();
-            buttonTemizle = new Button();
+            buttonSil = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
@@ -75,6 +76,7 @@
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel2.Controls.Add(buttonSil);
             panel2.Controls.Add(buttonTemizle);
             panel2.Controls.Add(buttonEkle);
             panel2.Controls.Add(label6);
@@ -93,6 +95,16 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(775, 154);
             panel2.TabIndex = 1;
+            // 
+            // buttonTemizle
+            // 
+            buttonTemizle.Location = new Point(511, 62);
+            buttonTemizle.Name = "buttonTemizle";
+            buttonTemizle.Size = new Size(94, 29);
+            buttonTemizle.TabIndex = 13;
+            buttonTemizle.Text = "Temizle";
+            buttonTemizle.UseVisualStyleBackColor = true;
+            buttonTemizle.Click += buttonTemizle_Click;
             // 
             // buttonEkle
             // 
@@ -202,15 +214,15 @@
             textBoxMusteriId.Size = new Size(125, 27);
             textBoxMusteriId.TabIndex = 0;
             // 
-            // buttonTemizle
+            // buttonSil
             // 
-            buttonTemizle.Location = new Point(511, 66);
-            buttonTemizle.Name = "buttonTemizle";
-            buttonTemizle.Size = new Size(94, 29);
-            buttonTemizle.TabIndex = 13;
-            buttonTemizle.Text = "Temizle";
-            buttonTemizle.UseVisualStyleBackColor = true;
-            buttonTemizle.Click += buttonTemizle_Click;
+            buttonSil.Location = new Point(511, 101);
+            buttonSil.Name = "buttonSil";
+            buttonSil.Size = new Size(94, 29);
+            buttonSil.TabIndex = 14;
+            buttonSil.Text = "Sil";
+            buttonSil.UseVisualStyleBackColor = true;
+            buttonSil.Click += buttonSil_Click;
             // 
             // Form1
             // 
@@ -248,5 +260,6 @@
         private Label label1;
         private Button buttonEkle;
         private Button buttonTemizle;
+        private Button buttonSil;
     }
 }
