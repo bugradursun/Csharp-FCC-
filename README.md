@@ -15,4 +15,4 @@ MusteriOtomasyonu: You can automate your customers and track their information i
 
 
 LoginEkrani: sha256 algoritmasi kullanılarak kayit/giris ekrani
-![Uploading Ekran Görüntüsü (35).png…]()
+![Ekran Görüntüsü (35)](https://github.com/bugradursun/Csharp-FCC-/assets/72981010/32899772-f048-43e9-ad19-8942ec6a9a93)
