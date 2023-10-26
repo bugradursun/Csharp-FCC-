@@ -86,6 +86,7 @@
             buttonGiris.TabIndex = 5;
             buttonGiris.Text = "Giris";
             buttonGiris.UseVisualStyleBackColor = true;
+            buttonGiris.Click += buttonGiris_Click;
             // 
             // Form1
             // 
