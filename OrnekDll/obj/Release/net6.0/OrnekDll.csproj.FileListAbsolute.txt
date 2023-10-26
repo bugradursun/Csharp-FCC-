@@ -1,0 +1,11 @@
+C:\Users\bugra\Desktop\C#-Course\Giraffe\OrnekDll\bin\Release\net6.0\OrnekDll.deps.json
+C:\Users\bugra\Desktop\C#-Course\Giraffe\OrnekDll\bin\Release\net6.0\OrnekDll.dll
+C:\Users\bugra\Desktop\C#-Course\Giraffe\OrnekDll\bin\Release\net6.0\OrnekDll.pdb
+C:\Users\bugra\Desktop\C#-Course\Giraffe\OrnekDll\obj\Release\net6.0\OrnekDll.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bugra\Desktop\C#-Course\Giraffe\OrnekDll\obj\Release\net6.0\OrnekDll.AssemblyInfoInputs.cache
+C:\Users\bugra\Desktop\C#-Course\Giraffe\OrnekDll\obj\Release\net6.0\OrnekDll.AssemblyInfo.cs
+C:\Users\bugra\Desktop\C#-Course\Giraffe\OrnekDll\obj\Release\net6.0\OrnekDll.csproj.CoreCompileInputs.cache
+C:\Users\bugra\Desktop\C#-Course\Giraffe\OrnekDll\obj\Release\net6.0\OrnekDll.dll
+C:\Users\bugra\Desktop\C#-Course\Giraffe\OrnekDll\obj\Release\net6.0\refint\OrnekDll.dll
+C:\Users\bugra\Desktop\C#-Course\Giraffe\OrnekDll\obj\Release\net6.0\OrnekDll.pdb
+C:\Users\bugra\Desktop\C#-Course\Giraffe\OrnekDll\obj\Release\net6.0\ref\OrnekDll.dll

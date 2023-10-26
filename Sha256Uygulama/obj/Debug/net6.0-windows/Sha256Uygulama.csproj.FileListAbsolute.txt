@@ -1,0 +1,16 @@
+C:\Users\bugra\Desktop\C#-Course\Giraffe\Sha256Uygulama\bin\Debug\net6.0-windows\Sha256Uygulama.exe
+C:\Users\bugra\Desktop\C#-Course\Giraffe\Sha256Uygulama\bin\Debug\net6.0-windows\Sha256Uygulama.deps.json
+C:\Users\bugra\Desktop\C#-Course\Giraffe\Sha256Uygulama\bin\Debug\net6.0-windows\Sha256Uygulama.runtimeconfig.json
+C:\Users\bugra\Desktop\C#-Course\Giraffe\Sha256Uygulama\bin\Debug\net6.0-windows\Sha256Uygulama.dll
+C:\Users\bugra\Desktop\C#-Course\Giraffe\Sha256Uygulama\bin\Debug\net6.0-windows\Sha256Uygulama.pdb
+C:\Users\bugra\Desktop\C#-Course\Giraffe\Sha256Uygulama\obj\Debug\net6.0-windows\Sha256Uygulama.Form1.resources
+C:\Users\bugra\Desktop\C#-Course\Giraffe\Sha256Uygulama\obj\Debug\net6.0-windows\Sha256Uygulama.csproj.GenerateResource.cache
+C:\Users\bugra\Desktop\C#-Course\Giraffe\Sha256Uygulama\obj\Debug\net6.0-windows\Sha256Uygulama.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bugra\Desktop\C#-Course\Giraffe\Sha256Uygulama\obj\Debug\net6.0-windows\Sha256Uygulama.AssemblyInfoInputs.cache
+C:\Users\bugra\Desktop\C#-Course\Giraffe\Sha256Uygulama\obj\Debug\net6.0-windows\Sha256Uygulama.AssemblyInfo.cs
+C:\Users\bugra\Desktop\C#-Course\Giraffe\Sha256Uygulama\obj\Debug\net6.0-windows\Sha256Uygulama.csproj.CoreCompileInputs.cache
+C:\Users\bugra\Desktop\C#-Course\Giraffe\Sha256Uygulama\obj\Debug\net6.0-windows\Sha256Uygulama.dll
+C:\Users\bugra\Desktop\C#-Course\Giraffe\Sha256Uygulama\obj\Debug\net6.0-windows\refint\Sha256Uygulama.dll
+C:\Users\bugra\Desktop\C#-Course\Giraffe\Sha256Uygulama\obj\Debug\net6.0-windows\Sha256Uygulama.pdb
+C:\Users\bugra\Desktop\C#-Course\Giraffe\Sha256Uygulama\obj\Debug\net6.0-windows\Sha256Uygulama.genruntimeconfig.cache
+C:\Users\bugra\Desktop\C#-Course\Giraffe\Sha256Uygulama\obj\Debug\net6.0-windows\ref\Sha256Uygulama.dll

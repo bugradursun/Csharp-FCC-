@@ -61,7 +61,7 @@
             panel1.Controls.Add(dataGridView1);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(776, 321);
+            panel1.Size = new Size(965, 480);
             panel1.TabIndex = 0;
             // 
             // dataGridView1
@@ -73,7 +73,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(776, 321);
+            dataGridView1.Size = new Size(965, 480);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
@@ -99,9 +99,9 @@
             panel2.Controls.Add(textBoxSoyad);
             panel2.Controls.Add(textBoxAd);
             panel2.Controls.Add(textBoxMusteriId);
-            panel2.Location = new Point(13, 339);
+            panel2.Location = new Point(13, 498);
             panel2.Name = "panel2";
-            panel2.Size = new Size(775, 154);
+            panel2.Size = new Size(964, 154);
             panel2.TabIndex = 1;
             // 
             // button2
@@ -277,7 +277,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DeepSkyBlue;
-            ClientSize = new Size(800, 505);
+            ClientSize = new Size(989, 664);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "Form1";

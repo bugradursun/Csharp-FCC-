@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "DllKullanimProjesi/1.0.0": {
+        "dependencies": {
+          "OrnekDll": "1.0.0.0"
+        },
+        "runtime": {
+          "DllKullanimProjesi.dll": {}
+        }
+      },
+      "OrnekDll/1.0.0.0": {
+        "runtime": {
+          "OrnekDll.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DllKullanimProjesi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OrnekDll/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
