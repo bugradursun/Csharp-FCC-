@@ -35,6 +35,8 @@ namespace LoginEkrani
                 SqlCommand sqlCommand = new SqlCommand(sorgu, baglanti);
                 sqlCommand.Parameters.AddWithValue("@P1", textBoxKullaniciAdi.Text); //P1 parameter = kullaniciadi inputu!
                 SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                bool yeniKullaniciEkle = false; //flag
                 if(reader.HasRows)
                 {
                     MessageBox.Show(textBoxKullaniciAdi.Text + " isminde bir kullanýcý zaten mevcut!");
@@ -42,11 +44,17 @@ namespace LoginEkrani
                 else
                 {
                     //kayitli degilse yeni kullaniciyi ekleyecegiz
-                    sqlCommand = new SqlCommand("INSERT INTO Kullanici VALUES (@P1,@P2) ",baglanti);
+                    yeniKullaniciEkle = true;
+                    
+                    
+                }
+                reader.Close();
+                if(yeniKullaniciEkle)
+                {
+                    sqlCommand = new SqlCommand("INSERT INTO Kullanici VALUES (@P1,@P2) ", baglanti);
                     sqlCommand.Parameters.AddWithValue("@P1", textBoxKullaniciAdi.Text);
                     sqlCommand.Parameters.AddWithValue("@P2", sha256KoduOlustur(textBoxSifre.Text));
-                    sqlCommand.ExecuteNonQuery(); 
-                    
+                    sqlCommand.ExecuteNonQuery();
                 }
             }
             catch(Exception ex) {
