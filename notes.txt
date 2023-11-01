@@ -136,4 +136,4 @@ public void Reset() { index=-1}
 
 }
 ------------------------ENTITY FRAMEWORK and OBJECT RELATIONAL MAPPING---------------------------------------------
-Entity framework is a tool of ORM(Object Relational Mapping). ORM is a bridge between relational databases and OOP.This bridge enables us to use object models to manage data in relational databases.So, Entity framework connects our object to databases and does data transfer.
+Entity framework is a tool of ORM(Object Relational Mapping). ORM is a bridge between relational databases and OOP.This bridge enables us to use object models to manage data in relational databases.So, Entity framework connects our object to databases and does data transfer. Entity framework consists Ado.net and it uses UnitOfWork design pattern.Since we need to write CRUD queries for every operations in ADO.net and it is also slow and old, we use unitofwork design pattern. With UnitOfWork, instead of executing every change in database, we do them all together in one channel.
