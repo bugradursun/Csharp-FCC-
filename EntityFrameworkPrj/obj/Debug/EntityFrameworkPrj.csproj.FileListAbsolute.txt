@@ -1,0 +1,16 @@
+C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\bin\Debug\EntityFrameworkPrj.exe.config
+C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\bin\Debug\EntityFrameworkPrj.exe
+C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\bin\Debug\EntityFrameworkPrj.pdb
+C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\bin\Debug\EntityFramework.dll
+C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\bin\Debug\EntityFramework.xml
+C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\obj\Debug\EntityFrameworkPrj.csproj.AssemblyReference.cache
+C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\obj\Debug\EntityFrameworkPrj.Form1.resources
+C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\obj\Debug\EntityFrameworkPrj.Properties.Resources.resources
+C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\obj\Debug\EntityFrameworkPrj.csproj.GenerateResource.cache
+C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\obj\Debug\EntityFrameworkPrj.csproj.CoreCompileInputs.cache
+C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\obj\Debug\EntityFrameworkPrj.csproj.CopyComplete
+C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\obj\Debug\EntityFrameworkPrj.exe
+C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\obj\Debug\EntityFrameworkPrj.pdb
+C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\obj\Debug\EntityFrameworkPrj.MusteriForm.resources

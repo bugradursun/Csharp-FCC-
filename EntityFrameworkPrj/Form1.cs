@@ -16,5 +16,24 @@ namespace EntityFrameworkPrj
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MusteriForm musteriForm = new MusteriForm();
+            musteriForm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UrunForm urunForm = new UrunForm();
+            urunForm.Show();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SiparisForm siparisForm = new SiparisForm();
+            siparisForm.Show();
+        }
     }
 }
