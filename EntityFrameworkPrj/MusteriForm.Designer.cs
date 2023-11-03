@@ -38,6 +38,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonListele = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,24 +53,26 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(747, 220);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // textBoxMusteriId
             // 
-            this.textBoxMusteriId.Location = new System.Drawing.Point(126, 275);
+            this.textBoxMusteriId.Enabled = false;
+            this.textBoxMusteriId.Location = new System.Drawing.Point(165, 270);
             this.textBoxMusteriId.Name = "textBoxMusteriId";
             this.textBoxMusteriId.Size = new System.Drawing.Size(100, 22);
             this.textBoxMusteriId.TabIndex = 1;
             // 
             // textBoxSehir
             // 
-            this.textBoxSehir.Location = new System.Drawing.Point(126, 397);
+            this.textBoxSehir.Location = new System.Drawing.Point(165, 392);
             this.textBoxSehir.Name = "textBoxSehir";
             this.textBoxSehir.Size = new System.Drawing.Size(100, 22);
             this.textBoxSehir.TabIndex = 2;
             // 
             // textBoxSoyad
             // 
-            this.textBoxSoyad.Location = new System.Drawing.Point(126, 353);
+            this.textBoxSoyad.Location = new System.Drawing.Point(165, 348);
             this.textBoxSoyad.Name = "textBoxSoyad";
             this.textBoxSoyad.Size = new System.Drawing.Size(100, 22);
             this.textBoxSoyad.TabIndex = 3;
@@ -76,7 +80,7 @@
             // 
             // textBoxAd
             // 
-            this.textBoxAd.Location = new System.Drawing.Point(126, 313);
+            this.textBoxAd.Location = new System.Drawing.Point(165, 308);
             this.textBoxAd.Name = "textBoxAd";
             this.textBoxAd.Size = new System.Drawing.Size(100, 22);
             this.textBoxAd.TabIndex = 4;
@@ -84,7 +88,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 280);
+            this.label1.Location = new System.Drawing.Point(73, 275);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 16);
             this.label1.TabIndex = 5;
@@ -93,7 +97,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 319);
+            this.label2.Location = new System.Drawing.Point(73, 314);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 6;
@@ -102,7 +106,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 403);
+            this.label3.Location = new System.Drawing.Point(73, 398);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 16);
             this.label3.TabIndex = 7;
@@ -111,7 +115,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 359);
+            this.label4.Location = new System.Drawing.Point(73, 354);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 16);
             this.label4.TabIndex = 8;
@@ -119,7 +123,7 @@
             // 
             // buttonListele
             // 
-            this.buttonListele.Location = new System.Drawing.Point(289, 275);
+            this.buttonListele.Location = new System.Drawing.Point(328, 270);
             this.buttonListele.Name = "buttonListele";
             this.buttonListele.Size = new System.Drawing.Size(115, 23);
             this.buttonListele.TabIndex = 9;
@@ -127,11 +131,33 @@
             this.buttonListele.UseVisualStyleBackColor = true;
             this.buttonListele.Click += new System.EventHandler(this.buttonListele_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(328, 311);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Ekle";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(328, 354);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(115, 23);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Sil";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // MusteriForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonListele);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -163,5 +189,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button buttonListele;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
