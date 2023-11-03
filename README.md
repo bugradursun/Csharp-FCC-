@@ -12,3 +12,7 @@ GeographyProject: You can track your company's cars and see them on the map, you
 
 MusteriOtomasyonu: You can automate your customers and track their information in our app!
 ![Ekran Görüntüsü (30)](https://github.com/bugradursun/Csharp-FCC-/assets/72981010/143e18e2-a9fb-4944-9af9-acc267a8ddf6)
+
+
+LoginEkrani: sha256 algoritmasi kullanılarak kayit/giris ekrani
+![Ekran Görüntüsü (35)](https://github.com/bugradursun/Csharp-FCC-/assets/72981010/32899772-f048-43e9-ad19-8942ec6a9a93)
