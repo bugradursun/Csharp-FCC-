@@ -14,3 +14,4 @@ C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\obj\Debug\EntityFram
 C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\obj\Debug\EntityFrameworkPrj.exe
 C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\obj\Debug\EntityFrameworkPrj.pdb
 C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\obj\Debug\EntityFrameworkPrj.MusteriForm.resources
+C:\Users\bugra\Desktop\C#-Course\Giraffe\EntityFrameworkPrj\obj\Debug\EntityFrameworkPrj.UrunForm.resources

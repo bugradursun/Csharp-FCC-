@@ -89,7 +89,7 @@ namespace EntityFrameworkPrj
                 int musteriId = Convert.ToInt32(textBoxMusteriId.Text); //musteri id'si ile silinecek olan secili veriyi bulduk
                 var musteri = entities.Customer.Find(musteriId);
                 entities.Customer.Remove(musteri);
-                entities.SaveChanges();
+                entities.SaveChanges(); 
                 MessageBox.Show("Musteri Kaydi Silindi!");
                 tumKayitlariGoster();
 
