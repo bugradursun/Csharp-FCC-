@@ -1,13 +1,29 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import "./App.css";
-import Web3 from "web3";
-const ethers = require("ethers");
+// UploadImage.js
+
+import React, { useState } from "react";
 
 function UploadImage() {
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleFileChange = (e) => {
+    // Handle the selected file here
+    const file = e.target.files[0];
+    setSelectedFile(file);
+  };
+
+  const handleUpload = () => {
+    // Implement the image upload logic here
+    if (selectedFile) {
+      
+      console.log("Uploading file:", selectedFile);
+    }
+  };
+
   return (
     <div>
-      <h3>Upload Image Page</h3>
+      <h1>Upload Image Page</h1>
+      <input type="file" accept="image/*" onChange={handleFileChange} />
+      <button onClick={handleUpload}>Upload Image</button>
     </div>
   );
 }
