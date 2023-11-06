@@ -1,0 +1,66 @@
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import "./App.css";
+import Web3 from "web3";
+import UploadImage from "./UploadImage";
+const ethers = require("ethers");
+
+//import styles from "./styles/Home.module.css";
+
+function App() {
+  const [walletAddress, setWalletAddress] = useState("");
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [buttonText, setButtonText] = useState("Connect Wallet");
+
+  const changeText = (text) => setButtonText(text);
+
+  async function requestAccount() {
+    console.log("Requesting account...");
+    if (window.ethereum) {
+      console.log("detected");
+
+      try {
+        const accounts = await window.ethereum.request({
+          method: "eth_requestAccounts",
+        });
+        setWalletAddress(accounts[0]);
+        setLoggedIn(true);
+        changeText("You are connected");
+        //afterConnection(); //TEST EDİLECEK
+        //console.log(accounts);
+      } catch (error) {
+        console.log("Error connecting");
+      }
+    } else {
+      console.log("Metamask not detecetd");
+    }
+  }
+
+  async function connectWallet() {
+    if (typeof window.ethereum !== "undefined") {
+      await requestAccount();
+
+      const provider = new ethers.providers.Web3Provider(window.ethereum); //read operations
+    }
+  }
+
+  const afterConnection = async () => {
+    if (loggedIn) {
+      //navigate yapilacak
+    } else {
+      return <h1>You are not connected!</h1>;
+    }
+  };
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <button onClick={requestAccount}>{buttonText}</button>
+        <h3>Connection Successful</h3>
+        <h3>Wallet Address:{walletAddress}</h3>
+      </header>
+    </div>
+  );
+}
+
+export default App;
