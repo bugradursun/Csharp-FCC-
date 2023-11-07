@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as pdfjs from "pdfjs-dist"; // Import the full PDF.js library
 import { PDFDocument, rgb } from "pdf-lib"; //generating new pdf
-import pdfParse from "pdf-parse"
+//import "pdfjs-dist/build/pdf.worker.entry"; //text layer
 
 pdfjs.GlobalWorkerOptions.workerSrc =
   "./node_modules/pdfjs-dist/build/pdf.worker.mjs";
