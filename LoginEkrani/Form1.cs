@@ -45,7 +45,7 @@ namespace LoginEkrani
                 bool yeniKullaniciEkle = false; //flag
                 if (reader.HasRows)
                 {
-                    MessageBox.Show(textBoxKullaniciAdi.Text + " isminde bir kullanýcý zaten mevcut!");
+                    MessageBox.Show(textBoxKullaniciAdi.Text + " isminde bir kullanÃ½cÃ½ zaten mevcut!");
                 }
                 else
                 {
@@ -95,11 +95,11 @@ namespace LoginEkrani
 
                 if(reader.HasRows)
                 {
-                    MessageBox.Show("Kullanýcý adý ve sifre dogru! Sisteme Hos Geldiniz");
+                    MessageBox.Show("KullanÃ½cÃ½ adÃ½ ve sifre dogru! Sisteme Hos Geldiniz");
                 }
                 else
                 {
-                    MessageBox.Show("Kullanýcý adý veya sifre hatali! Tekrar deneyiniz");
+                    MessageBox.Show("KullanÃ½cÃ½ adÃ½ veya sifre hatali! Tekrar deneyiniz");
                 }
             }
             catch(Exception ex)
